@@ -82,6 +82,5 @@ grails.project.dependency.resolution = {
 
 		compile ":spring-security-oauth2-provider:2.0-RC2"
 		compile ":spring-security-core:2.0-RC4"
-		compile ":multi-tenant-single-db:0.8.3"
     }
 }

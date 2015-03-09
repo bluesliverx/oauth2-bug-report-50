@@ -1,8 +1,5 @@
 package com.example
 
-import grails.plugin.multitenant.core.annotation.MultiTenant
-
-@MultiTenant
 class Client {
 
     private static final String NO_CLIENT_SECRET = ''

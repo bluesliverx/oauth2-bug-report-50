@@ -1,8 +1,5 @@
 package com.example
 
-import grails.plugin.multitenant.core.annotation.MultiTenant
-
-@MultiTenant
 class RefreshToken {
 
     String value

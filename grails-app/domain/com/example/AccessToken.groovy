@@ -1,8 +1,5 @@
 package com.example
 
-import grails.plugin.multitenant.core.annotation.MultiTenant
-
-@MultiTenant
 class AccessToken {
 
     String authenticationKey
@@ -22,12 +19,12 @@ class AccessToken {
     static constraints = {
         username nullable: true
         clientId nullable: false, blank: false
-        value nullable: false, blank: false, unique: 'tenantId'
+        value nullable: false, blank: false, unique: 'username'
         tokenType nullable: false, blank: false
         expiration nullable: false
         scope nullable: false
         refreshToken nullable: true
-        authenticationKey nullable: false, blank: false, unique: 'tenantId'
+        authenticationKey nullable: false, blank: false, unique: 'username'
         authentication nullable: false, minSize: 1, maxSize: 1024 * 4
     }
 

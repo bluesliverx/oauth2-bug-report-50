@@ -1,9 +1,7 @@
 package com.example
 
-import grails.plugin.multitenant.core.annotation.MultiTenant
 import org.apache.commons.lang.builder.HashCodeBuilder
 
-@MultiTenant
 class UserRole implements Serializable {
 
 	private static final long serialVersionUID = 1
@@ -42,7 +40,7 @@ class UserRole implements Serializable {
 	}
 
 	static UserRole create(User user, Role role, boolean flush = false) {
-		def instance = new UserRole(user: user, role: role, tenantId:user.tenantId)
+		def instance = new UserRole(user: user, role: role)
 		instance.save(flush: flush, insert: true)
 		instance
 	}
